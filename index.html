@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Encryption</title>
+		<link rel="stylesheet" href="src/css/style.css" />
+	</head>
+	<body>
+		<div id="background"></div>
+
+		<section id="home">
+			<div class="wrapper">
+				<h2 class="title">Encryption</h2>
+				<div class="form__container">
+					<div class="slide__controls">
+						<input type="radio" name="slide" id="encryption" checked />
+						<input type="radio" name="slide" id="decryption" />
+						<label for="encryption" class="slide encryption">Encryption</label>
+						<label for="decryption" class="slide decryption">Decryption</label>
+						<div class="slider__tab"></div>
+					</div>
+					<div class="form__inner">
+						<form action="" method="post" class="encryption">
+							<div class="field">
+								<textarea name="encryption-text" id="encryption-text" placeholder="Enter any text to be encrypted"></textarea>
+							</div>
+							<div class="field">
+								<input name="encryption-key" id="encryption-key" type="text" placeholder="Enter secret key" required autocomplete="off" />
+							</div>
+							<div class="field btn">
+								<input type="button" value="Encryption" onclick="encryptText()" />
+							</div>
+							<div class="field result">
+								<label for="encryption-result">Result</label>
+								<textarea name="encryption-result" id="encryption-result" readonly></textarea>
+							</div>
+						</form>
+						<form action="" method="post" class="decryption">
+							<div class="field">
+								<textarea name="decryption-text" id="decryption-text" placeholder="Enter any text to be encrypted"></textarea>
+							</div>
+							<div class="field">
+								<input name="decryption-key" id="decryption-key" type="text" placeholder="Enter secret key" required autocomplete="off" />
+							</div>
+							<div class="field btn">
+								<input type="button" value="Decryption" onclick="decryptText()" />
+							</div>
+							<div class="field result">
+								<label for="decryption-result">Result</label>
+								<textarea name="decryption-result" id="decryption-result" readonly></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- JS -->
+		<script src="src/js/script.js"></script>
+	</body>
+</html>
